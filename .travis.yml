@@ -1,0 +1,9 @@
+language: C
+sudo: false # faster builds
+
+script: 
+  - gcc -o hello hello.c
+  - ./hello
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
